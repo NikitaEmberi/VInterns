@@ -13,20 +13,8 @@
     <title>Admin-login</title>
 </head>
 <body class = "bg-gray-900">
-<!-- <header class="fixed top-0 w-full text-gray-500 bg-gray-800 body-font">
-        <div class="container mx-auto flex flex-wrap px-5 py-6 flex-col md:flex-row items-center">
-            <a href="index.php" class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
-              <img class="logo-img" src="../images/logoresize.png">
-                <span class="ml-3 text-xl">vIntern</span>
-              </a>
-        </div>
-        <div class="md:ml-auto">
-              <a href="index.php"><button class='flex mx-auto  text-white bg-teal-500 border-0   px-2  py-2 ocus:outline-none hover:bg-teal-600 rounded text-lg'>
-              <i class="fa fa-sign-out"> Logout</i></button></a>
-        </div>
-  </header>       -->
-
-  <header class=" text-gray-500 bg-gray-800 body-font">
+   
+    <header class=" text-gray-500 bg-gray-800 body-font">
         <div class="container mx-auto flex flex-wrap px-5 py-6 flex-col md:flex-row items-center">
             <a href="index.php" class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
               <img class="logo-img" src="../images/logoresize.png">
@@ -35,8 +23,12 @@
               <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
                 <a class="mr-5 hover:text-white">BRANCH SELECTION</a>
                 </nav>
+          <a href="index.php"><button class='flex mx-auto  text-white bg-teal-500 border-0   px-2  py-2 ocus:outline-none hover:bg-teal-600 rounded text-lg'>
+              <i class="fa fa-sign-out"> BACK</i></button>
+          </a>
         </div>
       </header>
+
 
 
       <section class="text-gray-500 bg-gray-900 body-font py-24 mt-auto">
