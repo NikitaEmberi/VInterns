@@ -13,22 +13,23 @@
     <title>Sorted Students</title>
 </head>
 <body class = "bg-gray-900">
-  <header class=" text-gray-500 bg-gray-800 body-font">
+    <header class=" text-gray-500 bg-gray-800 body-font">
     <div class="container mx-auto flex flex-wrap px-5 py-6 flex-col md:flex-row items-center">
     <a href="index.php" class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
               <img class="logo-img" src="../images/logoresize.png">
                 <span class="ml-3 text-xl">vIntern</span>
               </a>
           <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-            <a class="mr-5 hover:text-white">Filtered Students</a>
+            <a class="mr-5 hover:text-white">Filter Students</a>
             </nav>
-            <a href="branch-select.php"><button class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">BACK
+            <a href="student-data.php?branch=<?php echo $_GET['branch']?>"><button class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">BACK
             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
               <path d="M1 12h14M13 5l7 7-7 7"></path>
             </svg>
           </button></a>
     </div>
   </header>
+
   <form action="filtered_students.php?branch=<?php echo $_GET['branch']?>" METHOD="POST">
       <section class="text-gray-500 bg-gray-900 body-font overflow-hidden">
         <div class="container px-10 py-20 mx-auto">
