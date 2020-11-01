@@ -24,13 +24,16 @@
         </div>
   </header>      
 
-    <!-- <section class='text-gray-500 bg-gray-900 body-font overflow-hidden'>
-        <div class='container px-20 py-24 mx-auto'>
-            <div class='flex flex-col'>
-                <h1 class='text-center w-full sm:text-3xl text-2xl font-medium title-font pt-6 text-white'>Students of branch <?php echo $_GET['branch']?></h1>
-            </div>
+  <header class="fixed top-0 w-full text-gray-500 bg-gray-800 body-font">
+        <div class="container mx-auto flex flex-wrap px-5 py-6 flex-col md:flex-row items-center">
+            <a href="index.php" class="flex title-font font-medium items-center text-white mb-4 mr-auto md:mb-0">
+              <img class="logo-img" src="../images/logoresize.png">
+                <span class="ml-3 text-xl">vIntern</span>
+              </a>
+              <a href="sort-students-form.php?branch=<?php echo $_GET['branch'] ?>"><button class='flex mx-auto  text-white bg-teal-500 border-0   px-2  py-2 ocus:outline-none hover:bg-teal-600 rounded text-lg'>
+              <i class="fa fa-sign-out"> BACK</i></button></a>
         </div>
-    </section> -->
+  </header>   
 
   <section class="text-gray-500 bg-gray-900 body-font justify-center py-24" style="margin-left:auto">
         <div class='container px-20 py-2 mx-auto'>
