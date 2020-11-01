@@ -27,6 +27,15 @@
                 </nav>
         </div>
       </header>
+   
+       <section class="text-gray-500 body-font bg-gray-900">
+        <div class="container px-5 py-2 mx-auto">
+          <div class="flex flex-col text-center w-full mb-20">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">vIntern</h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base"> The haven to keep all your internship records and utilitarian for you to get your internship.</p>          </div>
+        </div>
+      </section>
+
 
       <section class="text-gray-500 bg-gray-900 body-font">
         <div class="container px-5 mx-auto">
