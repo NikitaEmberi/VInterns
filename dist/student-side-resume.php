@@ -101,38 +101,48 @@
   <br><br>
   <hr>
 
-  <?php
-       $rollNo=$_SESSION['rollNo'];
-       $query="SELECT * from skills where student_id='$rollNo'";
-       $result=mysqli_query($con,$query) or die(mysqli_error($con));
-       $row = mysqli_fetch_array($result);  
-  ?>
-  <section class="text-gray-500 bg-gray-900 body-font justify-center" style="margin-left:auto">
+    <section class="text-gray-500 bg-gray-900 body-font justify-center" style="margin-left:auto">
         <div class='container px-20 py-2 mx-auto'>
             <div class='flex flex-col text-center w-full mb-5'>
-            <h1 class="sm:text-3xl text-2xl font-medium title-font mt-5 text-white">YOUR ACHIEVEMENTS</h1>
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mt-5 text-white">YOUR ACHIEVEMENTS :</h1>
+            </div>
+            <div class='flex flex-col w-full mb-5'>
+            <a href="add_achievements.php"><button class='flex mx-auto text-white bg-teal-500 border-0   px-2 focus:outline-none hover:bg-teal-600 rounded text-lg'>Add</button></a>
             </div>
         </div> 
         <div class="container px-5 py-0 mx-auto flex justify-center p-12">
+        <?php 
+            $i=0;
+            $q="SELECT * from skills where student_id='$rollNo'";
+            $r=mysqli_query($con,$q) or die(mysqli_error($con));
+            $n=mysqli_num_rows($r);
+            if($n>0){
+        ?>
         <table class="table-auto ml-10 justify-center">
+            <thead>
+            <tr>
+                <th class="text-lg mt-10 sm:mt-0 px-4  py-2 border text-white bg-teal-500  hover:bg-teal-600">Sr. No</th>
+                <th class="text-lg mt-10 sm:mt-0 px-4  py-2 border text-white bg-teal-500  hover:bg-teal-600"> Achievements </th>
+                <th class="text-lg mt-10 sm:mt-0 px-4  py-2 border text-white bg-teal-500  hover:bg-teal-600">Delete</th>
+            </tr>
+            </thead>
             <tbody>
-            <tr>
-                <th class="text-lg mt-1 sm:mt-0 px-4  text-white ">ACHIEVEMNT 01  </th>
-                <th class="text-lg mt-1 sm:mt-0 px-4  text-white "> : </th>
-                <td class="text-lg mt-1 sm:mt-0 px-4  text-white "><?php echo $row['Achievement_01']?></td>
-            </tr>
-            <tr>
-                <th class="text-lg mt-1 sm:mt-0 px-4   text-white ">ACHIEVEMENT 02  </th>
-                <th class="text-lg mt-1 sm:mt-0 px-4  text-white "> : </th>
-                <td class="text-lg mt-1 sm:mt-0 px-4    text-white "><?php echo $row['Achievement_02']?></td>
-            </tr>
-            <tr>
-                <th class="text-lg mt-1 sm:mt-0 px-4   text-white ">ACHIEVEMNT 03  </th>
-                <th class="text-lg mt-1 sm:mt-0 px-4  text-white "> : </th>
-                <td class="text-lg mt-1 sm:mt-0 px-4   text-white "><?php echo $row['Achievement_03']?></td>
-            </tr>
+                <?php
+                    while($r4 = mysqli_fetch_array($r)){
+                        $i++;
+                ?>
+                <tr>
+                <td class="border px-4 py-2"><?php echo $i ?></td>
+                <td class="border px-4 py-2"><?php echo $r4['achievements'] ?></td>
+                <td class="border px-4 py-2">
+                    <a href="delete_achievemnts.php?id=<?php echo $r4["id"]?>"><button class='flex mx-auto text-white bg-teal-500 border-0  px-2 focus:outline-none hover:bg-teal-600 rounded text-lg'>Delete</button></a>
+                </td>
+                </tr>
             </tbody>
-            </table>
+            <?php } 
+            }
+            ?>
+        </table>
         </div>
   </section>
   <br><br>
