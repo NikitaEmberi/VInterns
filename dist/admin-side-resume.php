@@ -1,5 +1,10 @@
 <?php
    require("../includes/common.php");
+   $rn=$_GET['rollNo'];
+   $qy="SELECT branch from students where rollNo='$rn'";
+   $rq=mysqli_query($con,$qy) or die(mysqli_error($con));
+   $rq=mysqli_fetch_array($rq);
+   $branch=$rq['branch'];
 ?>
 
 <!DOCTYPE html>
@@ -19,9 +24,10 @@
               <img class="logo-img" src="../images/logoresize.png">
                 <span class="ml-3 text-xl">vIntern</span>
               </a>
-              <a href="index.php"><button class='flex mx-auto md:ml-auto text-white bg-teal-500 border-0   px-2  py-2 ocus:outline-none hover:bg-teal-600 rounded text-lg'>
+              <a href="index.php"><button class='flex mx-auto mr-4 md:ml-auto text-white bg-teal-500 border-0   px-2  py-2 ocus:outline-none hover:bg-teal-600 rounded text-lg'>
               <i class="fa fa-sign-out"> Logout</i></button></a>
-
+              <a href="student-data.php?branch=<?php echo $branch ?>"><button class='flex mx-auto  text-white bg-teal-500 border-0   px-2  py-2 ocus:outline-none hover:bg-teal-600 rounded text-lg'>
+              <i class="fa fa-sign-out"> BACK</i></button></a>
         </div>
   </header>      
 
