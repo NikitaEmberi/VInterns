@@ -14,3 +14,5 @@ it should be accessible to the student as well as the college staff.
 data.
 - The application should have a interactive GUI prototype for easy accessibility and
 understanding.
+
+![](Vinterns.mp4)
