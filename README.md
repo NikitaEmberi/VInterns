@@ -12,7 +12,7 @@ regularly by students.
 it should be accessible to the student as well as the college staff.
 - The application will reduce the frequent issues of deletion and updation of the
 data.
-- The application has aninteractive GUI prototype for easy accessibility and
+- The application has an interactive GUI prototype for easy accessibility and
 understanding.
 
 ![](Vinterns.mp4)
